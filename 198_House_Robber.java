@@ -1,0 +1,20 @@
+/*
+Array represents money in each house on a street. Adjacent houses cannot be robbed. Find maximum money that can be robbed without alerting the police.
+*/
+// Space Complexity - O(1)
+// Time COmplexity - O(n)
+// Approach - Dynamic Programming (Bottom Up Process) - Maximum Money that can be robbed leading up to each ith house
+class Solution {
+    public int rob(int[] nums) {
+        int n = nums.length;
+        if(n == 0)
+            return 0;
+        if(n == 1)
+            return nums[0];
+        if(n > 2)
+            nums[2] += nums[0];
+        for(int i=3; i<nums.length; i++)
+            nums[i] = Math.max(nums[i] + nums[i - 2], nums[i] + nums[i - 3]);
+        return Math.max(nums[n - 1], nums[n - 2]);
+    }
+}
