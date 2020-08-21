@@ -1,3 +1,7 @@
+/*
+Preorder Traversal of Binary Tree, Recursively and Iteratively
+*/
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -13,9 +17,6 @@
  *     }
  * }
  */
-/*
-Preorder Traversal of Binary Tree, Recursively and Iteratively
-*/
 
 //Recursively
 class Solution {
